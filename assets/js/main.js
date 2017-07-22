@@ -1,31 +1,7 @@
 $(document).ready(function () {
 
-	/*==Function that does the random checks==*/
 	var confirmEmail = /^[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-	 function submitHandler(e){
-		var msg = "";
-		if (!confirmEmail.test(form.email.value)) {
-			msg += "\nPlease Check Email Address";
-		}
-		if (form.pass1.value =="" || form.pass1.value !== form.pass2.value) {
-			msg += "\nYour Passwords do not match";
-		}
-		if (msg !== "") {
-			msg == "\nPlease check " + msg;
-		}else{
-			msg == "\nForm is valid...";
-		};
-		alert(msg);
-		 e.preventDefault();
-	 };
-	 function emailHandler(e){
-		if (e.target.value == "") {
-			alert("you forgot your Email");
-		}
-	 };
-	 // in character code space is 32; every letter has a charcode
 	
-	/*==End of function that does random checks==*/
 	
 	/*==catching the form feedback==*/
 	var msg = $('#form_feedback');
