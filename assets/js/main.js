@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-	var confirmEmail = /^[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-	
 	
 	/*==catching the form feedback==*/
 	var msg = $('#form_feedback');
