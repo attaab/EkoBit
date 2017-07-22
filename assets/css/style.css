@@ -1,0 +1,46 @@
+body{
+	overflow: hidden;
+}
+.form_area{
+	background-color: rgba(0, 147, 255, 0.07);
+	height: 650px;
+	width: 1336px;
+}
+.form_background {
+	
+}
+.form_card{
+	background-color: white;
+	box-shadow: 10px 10px 5px #888888;
+	height: 400px;
+}
+.site_name {
+	font-family: Lucida Handwriting;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.form_field_area{
+	padding-top: 100px;
+}
+label {
+	text-transform: uppercase;
+}
+input {
+	width: 35%;
+    padding: 12px 20px;
+    margin: 8px 3px;
+    box-sizing: border-box;
+}
+.submit_button{
+	width: 35%;
+    padding: 12px 20px;
+    margin: 8px 3px;
+    box-sizing: border-box;
+}
+#form_feedback{
+	font-family: tahoma !important;
+	padding-top: 10px;
+	color: #D00;
+	font-size: 14px;
+	float: right;
+}
