@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	
+/*==function for the form field section==*/
+	
 	/*==catching the form feedback==*/
 	var msg = $('#form_feedback');
 	/*==End of catching the form feedback==*/
@@ -84,7 +86,8 @@ $(document).ready(function () {
 			} else if($('#password2').val() != $('#password').val()) {
 				msg.text('*passwords do not match').css('color', '#D00');
 			} else {
-				$('#form_section').hide('slow');
+				$('#form_section').slideUp('slow');
+				$('#shopping_area').slideDown()
 			}
 		};
 		/*==End of final callback on form submit==*/
@@ -95,4 +98,69 @@ $(document).ready(function () {
 			msg.text('Everything is okay here');
 		});
 	/*==End of function that does the final check on submit==*/
+	
+/*==End of function for the form field section==*/
+	
+	
+/*==Function for the shopping area==*/
+
+	/*==controlling the wine section and setting it to display the .button class when pressed==*/
+	$('#wine_amount').click(function () {
+	    	$('.wine').fadeToggle();
+	    	$('.button').fadeIn();
+	    });
+	/*==End of controlling the wine section==*/
+
+	/*===Controlling the buscuit section fadetoggle and setting the #biscuit_head to display the .button class when pressed==*/
+	   $('#biscuit_head').click(function () {
+	    	$('.biscuit_type').fadeToggle();
+	    	$('.button').fadeIn();
+	    });
+	/*===End of Controlling the buscuit section==*/
+
+		/*==controlling the check_btn and triggering the .notification class when it is pressed==*/
+	  $('#check_btn').click(function () {
+	  	    $('.notification').fadeIn();
+	  });
+		/*==End of controlling the check_btn and triggering the .notification class when it is pressed==*/
+
+	  /*==Controlling the  cart section setting the default inputs for the list, checkout, the checkout total and the rest of it==*/
+		$('input[type="checkbox"]').change(function () {
+			var list = '',
+			    checkout = "",
+			    checkoutTotal = 0,
+			     total = 0,
+				 number = 0;
+		// console.log($(this));
+		// console.log($(this).parent());
+		// $(this).parent().text();
+
+		// $('#items_selected').html("<li>"+ $(this).parent().text() + "</li>");
+		$("[type = 'checkbox']:checked").each(function (e) {
+			list += "<li>" + $(this).parent().text() + "</li>"
+			checkout += "<li>" + $(this).parent().text() + "</li>"
+        	total += Number($(this).val());
+        	checkoutTotal += Number($(this).val());
+			number += total/total;
+		});
+	    $('#checkout').html(list);
+		$('#list').html(checkout);
+        $('#total_amount').html(total);
+         $('#checkout_total').html(checkoutTotal);
+		$('#count_of_items').text(number);
+	});
+	  /*==End of Controlling the  cart section setting the default inputs for the list, checkout, the checkout total and the rest of it==*/
+
+	
+/*==End of Function for the shopping area==*/
 });
+
+function load () {
+document.getElementById('done').style.display = "block"
+document.getElementById('done_text').style.display = "block"
+document.getElementById('loading').style.display = "none"
+document.getElementById('loading_text').style.display = "none"
+}
+function myFunction(){
+setTimeout(load, 4000);
+};

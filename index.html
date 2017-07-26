@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="refresh" content="">
 	 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compactible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,59 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
+	<!-- navbar for the name of the product and the cart area -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					<a class="nav navbar-nav navbar-brand site_logo" href="#">Ek<i class="fa fa-shopping-cart"></i>Bit</a>
+			</div>
+	
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="nav_shopping_cart fa fa-shopping-cart"><span class="img-circle" id="count_of_items">0</span></i></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">shopping List<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<b id="list"></b>
+							<h2 class="total_head text-center">
+							Total <span class="calc_amount">
+							₦ (<span id="total_amount"></span>)
+							</span>
+						</h2>
+							<div class="contents">
+								<h3><b>Create Basket</b></h3>
+								<p class="create_basket">
+								   Here's where you make a full basket of joy.
+								</p>
+								<p class="text-center">
+									<button class="btn btn-info btn-success button"  data-toggle="modal" data-target="#myModal" onclick="myFunction()">Weigh Basket</button>
+								</p>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<div class="contents notification row">
+		<h6><b>your items has been checked out<i style="color: green;" class="fa fa-check"></i></b></h6>
+	</div>
+	<!--End of the  navbar for the name of the product and the cart area -->
 <!--==Login form==-->
 	<section class="form_area" id="form_section">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="form_field_area">
 					<div class="col-md-4"></div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="form_card">
 							<h3 class="site_name">Ek<i class="fa fa-shopping-cart"></i>Bit<span id="form_feedback"></span></h3><hr/>
 							<div class="container">
@@ -39,16 +86,155 @@
 		</div>
 	</section>
 <!--==End of login Form==-->
-<!--	====Shopping Area====-->
-	<section class="cart_area">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4">
-				</div>
-			</div>
-		</div>
+	
+<!--====Shopping Area====-->
+	<section id="shopping_area">
+	 <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            	<!-- for wine -->
+	        <div class="row row_for_wine">
+	    		<div class="col-md-4">
+	    			<div class="card">
+	    				<div title="Click to toggle its content" id="wine_amount" class="item_head thumbnail">
+		    				<p>
+							 <div class="circle" data-toggle="tooltip" title="click to close">
+								<div class="inner_circle">
+
+								</div>
+							 </div>
+		    				</p>
+		    					<h3 class="item_name_wine">Wine</h3>
+		    					<h3 class="avrg_price">&#x20a6 150</h3>
+		    					<h6>(average price in store)</h6>
+		    					<h5><b>Click to see what is in the store</b></h5>
+		    					<h6>if its wine - its fine!</h6>
+	    				</div>
+	    				<div class="contents wine">
+	    				    <h3>Types of Wine</h3>
+	    					<p class="name">
+	    					   <label>
+		    					   	<input type="checkbox" value="200"><br/>
+		    					    Eva: <span class="item_price">&#x20a6</span>
+		    					    <span class="item_price amount">200</span>
+	    					   </label>
+	    					</p>
+	    					<p class="price">
+	    					   <label>
+		    					   	<input type="checkbox" value="500"><br/>
+		    					   Brandy: <span class="item_price">&#x20a6</span>
+	    					    <span class="item_price amount">500</span>
+	    					   </label>
+	    					<p class="description">
+	    					     <label>
+		    					   	<input type="checkbox" value="250"><br/>
+		    					   Mc Dowells: <span class="item_price">&#x20a6</span>
+	    					    <span class="item_price amount">250</span>
+	    					   </label>
+	    					</p>	
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col-md-4">
+	    			
+	    		</div>
+	    		    <!-- total section -->
+	    		<div class="col-md-4">
+	    		    
+	    		</div>
+	    	</div>
+	        <!--  for biscuits -->
+	    	<div class="row">
+	    		<div class="col-md-4">
+	    			<div class="card">
+	    				<div id="biscuit_head" class="thumbnail item_head">
+	    				<p>
+	    					 <div class="circle" data-toggle="tooltip" title="click to close">
+	    					 	<div class="inner_circle">
+	    					 		
+	    					 	</div>
+	    					 </div>
+    					 </p>
+	    					<h3 class="item_name">Biscuits</h3>
+	    					<h3 class="avrg_price">&#x20a6 30</h3>
+	    					<h6>(average price in store)</h6>
+	    					<h5><b>Click to see what is in the store</b></h5>
+	    					<h6>Here comes a new story</h6>
+	    				</div>
+	    				<div class="contents biscuit_type">
+	    				    <h3>Types of Biscuit</h3>
+	    					<p class="name">
+	    					    <label>
+		    					   	<input type="checkbox" value="10"><br/>
+		    					   Coaster: <span class="item_price">&#x20a6</span>
+	    					    <span class="item_price amount">10</span>
+	    					   </label>
+	    					</p>
+	    					<p class="price">
+	    					    <label>
+		    					    <input type="checkbox" value="50"><br/>
+		    					   Fibre Active: <span class="item_price">&#x20a6</span>
+	    					        <span class="item_price amount">50</span>
+	    					   </label>
+	    					</p>
+	    					<p class="description">
+	    					 <label>
+		    					    <input type="checkbox" value="25"><br/>
+		    					   wafers: <span class="item_price">&#x20a6</span>
+	    					    <span class="item_price amount">25</span>
+	    					   </label>
+	    					</p>	
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+		 	<!--End of for biscuits -->
+
+	    </div>
+	</div>
 	</section>
-<!--	====End of Shopping Area====-->
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h3 class="modal-title">
+		        	<ul class="fa-ul">
+					  <li><i id="done" class="fa-li fa fa-check-square"></i></li>
+					  <li><i id="loading" class="fa-li fa fa-spinner fa-spin"></i></li>
+					</ul>
+		        </h3>
+		      </div>
+		      <div class="modal-body">
+		        <p>
+		        	<span id="loading_text">
+		        		please Wait...
+		        	</span>
+		        	<div id="done_text">
+		        	    <p>
+		        	    	<b id="checkout"></b>
+		        	    </p>
+		        	    <p>
+		        	    	<span class="total_check">Total=<b id="checkout_total"></b></span>
+		        	    </p>
+		        	    <p>
+		        		your items are ready for purchase
+		        	    </p>
+		        	</div>
+		        </p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" id="check_btn" class="btn btn-danger" data-dismiss="modal">checkOut</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+		<!--End of modal-->
+<!--====End of Shopping Area====-->
 
 
 
