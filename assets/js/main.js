@@ -57,7 +57,7 @@ $(document).ready(function () {
 		if ($('#password').val().length <= 4) {
 			msg.text('*password must be at least five characters long-- trying using a mixture of letters and numbers to make it more secure').css('color', '#D00');
 		} else {
-			msg.text('');
+			msg.text('Passowrd okay - go on to confirm password').css('color', 'lightgreen');
 		};
 	});
 	/*==End of catching the password field and passing appropriate text to the password==*/
