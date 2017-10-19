@@ -1,4 +1,4 @@
-# EkoBit
+# EkoBits
 Project to aid EkoBit's fellows learn JQUERY
 
 The Model created is a shopping Cart system build entirely with jquery..
@@ -7,4 +7,5 @@ The Model created is a shopping Cart system build entirely with jquery..
 
 The project was designed for the fellows to also contribute to the programs structure and<br/>
 basic functionalities..
-so much so that they would master JQUERY....
+
+so much so that they would master <b>JQUERY</b>....
